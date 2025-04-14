@@ -1,0 +1,56 @@
+@use "variables";
+
+.testimonials {
+  padding: 128px 0 108px 0;
+  text-align: center;
+
+  .caption-1 {
+    color: variables.$PRIMARY_800;
+  }
+
+  h2 {
+    margin: 13px 0 40px;
+  }
+
+  .testimonial-wrapper {
+    display: flex;
+    align-items: center;
+
+    .testimonial-nav {
+        display: flex;
+        @media (max-width: variables.$BREAKPOINT-SM) {
+            display: none;
+        }
+    }
+
+    .testimonial-box {
+        max-width: 900px;
+        margin: 0 auto;
+    
+        .quote-icon {
+          margin: 0 auto 30px auto;
+          width: 30px;
+          height: 20px;
+        }
+    
+        .author {
+          margin: 43px 0 20px 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+    
+          img {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            margin-bottom: 12px;
+          }
+    
+          .body-1 {
+            color: variables.$GREY_700;
+          }
+        }
+      }
+  }
+
+}

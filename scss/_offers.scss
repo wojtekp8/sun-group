@@ -1,0 +1,56 @@
+@use "variables";
+
+.offers {
+  padding: 128px 0 0 0;
+
+  .offer-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 120px;
+
+    @media (max-width: variables.$BREAKPOINT-SM) {
+      flex-direction: column-reverse;
+    }
+
+    &.reverse {
+      flex-direction: row-reverse;
+
+      @media (max-width: variables.$BREAKPOINT-SM) {
+        flex-direction: column-reverse;
+      }
+    }
+
+    .offer-text {
+      flex: 1;
+      max-width: 548px;
+
+      .caption-1 {
+        color: variables.$PRIMARY_800;
+      }
+
+      h2 {
+        margin: 16px 0 24px;
+      }
+
+      p {
+        margin-bottom: 32px;
+      }
+    }
+
+    .offer-image {
+      flex: 1;
+      max-width: 548px;
+
+      img {
+        width: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .divider {
+    border-bottom: 1px solid variables.$GREY_200;
+  }
+}

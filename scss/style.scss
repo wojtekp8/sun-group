@@ -1,0 +1,93 @@
+@use "variables";
+@use "typography";
+@use "menu";
+@use "banner";
+@use "info";
+@use "offers";
+@use "testimonials";
+@use "blog";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  color: variables.$GREY_900;
+}
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+
+  @media (max-width: variables.$BREAKPOINT-SM) {
+    padding: 0 10px;
+  }
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  transition: background-color 0.15s;
+
+  &--medium {
+    padding: 14px 24px;
+  }
+
+  &--primary {
+    padding: 16px 32px;
+    background-color: variables.$PRIMARY_600;
+    color: #fff;
+    border: none;
+
+    &:hover {
+      background-color: variables.$PRIMARY_700;
+    }
+
+    &:active {
+      background-color: variables.$PRIMARY_800;
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    color: variables.$PRIMARY_600;
+    padding: 14px 32px;
+    border: 2px solid variables.$PRIMARY_600;
+
+    &:hover {
+      background-color: variables.$PRIMARY_50;
+    }
+  }
+}
+
+.btn-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background-color 0.15s;
+  border: 1px solid variables.$GREY_100;
+  color: #fff;
+
+  &:hover {
+    border-color: transparent;
+    background-color: variables.$PRIMARY_100;
+  }
+
+  &:active {
+    border-color: transparent;
+    background-color: variables.$PRIMARY_200;
+  }
+}
