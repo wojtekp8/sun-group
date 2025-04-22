@@ -5,6 +5,10 @@
   text-align: center;
   background-color: variables.$GREY_50;
 
+  @media (max-width: variables.$BREAKPOINT_MD) {
+    padding: 60px 0;
+  }
+
   .caption-1 {
     color: variables.$PRIMARY_800;
   }
@@ -13,18 +17,19 @@
     margin: 12px 0 64px 0;
   }
 
+
   .icon-boxes {
     display: flex;
-    gap: 30px;
+    gap: 32px;
 
-    @media (max-width: variables.$BREAKPOINT-SM) {
+    @media (max-width: variables.$BREAKPOINT_MD) {
       flex-direction: column;
     }
 
     .icon-box {
       display: flex;
       flex: 1;
-      gap: 25px;
+      gap: 24px;
       width: 100%;
 
       .circle {
@@ -36,7 +41,7 @@
         height: 56px;
         background-color: variables.$PRIMARY_100;
         border-radius: 50%;
-        margin: 0 auto 15px;
+        margin: 0 auto 15px auto;
       }
 
       .text {

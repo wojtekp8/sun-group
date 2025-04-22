@@ -6,11 +6,18 @@
 @use "offers";
 @use "testimonials";
 @use "blog";
+@use "cta";
+@use "contact";
+@use "footer";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -20,10 +27,10 @@ body {
 }
 
 .container {
-  max-width: 1360px;
+  max-width: variables.$CONTENT_WRAPER_WIDTH;
   margin: 0 auto;
 
-  @media (max-width: variables.$BREAKPOINT-SM) {
+  @media (max-width: variables.$CONTENT_WRAPER_WIDTH) {
     padding: 0 10px;
   }
 }
@@ -41,8 +48,11 @@ body {
     padding: 14px 24px;
   }
 
-  &--primary {
+  &--large {
     padding: 16px 32px;
+  }
+
+  &--primary {
     background-color: variables.$PRIMARY_600;
     color: #fff;
     border: none;
@@ -57,9 +67,9 @@ body {
   }
 
   &--secondary {
+    padding: 14px 30px;
     background-color: transparent;
     color: variables.$PRIMARY_600;
-    padding: 14px 32px;
     border: 2px solid variables.$PRIMARY_600;
 
     &:hover {

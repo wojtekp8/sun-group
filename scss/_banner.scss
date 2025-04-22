@@ -3,18 +3,26 @@
 .banner {
   display: flex;
   width: 100%;
-  min-height: 800px;
+
   background-color: #232427;
   overflow: hidden;
 
+  @media (min-width: variables.$BREAKPOINT_MD) {
+    min-height: 800px;
+  }
+
   .banner-content {
-    width: 50%;
+    width: 49%;
     display: flex;
     align-items: center;
 
+    @media (max-width: variables.$CONTENT_WRAPER_WIDTH) {
+      padding: 0 10px;
+    }
+
     .content-container {
       width: 100%;
-      max-width: 680px;
+      max-width: 661px;
       margin: 0 0 0 auto;
     }
 
@@ -23,18 +31,18 @@
 
       h1 {
         color: #fff;
-        margin-bottom: 40px;
+        margin-bottom: 32px;
       }
 
       .subheader-1 {
         color: #fff;
-        margin-bottom: 36px;
+        margin-bottom: 40px;
       }
     }
   }
 
   .banner-image {
-    width: 50%;
+    width: 51%;
     background-image: url("../images/banner.jpg");
     background-position: center;
     background-size: cover;
@@ -46,9 +54,10 @@
   }
 }
 
-@media (max-width: variables.$BREAKPOINT-SM) {
+@media (max-width: variables.$BREAKPOINT_MD) {
   .banner {
     flex-direction: column-reverse;
+    justify-content: flex-end;
 
     .banner-image {
       width: 100%;

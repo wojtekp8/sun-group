@@ -1,0 +1,33 @@
+@use "variables";
+
+.cta {
+  padding: 0 0 127px 0;
+  background-color: variables.$GREY_50;
+
+  @media (max-width: variables.$BREAKPOINT_MD) {
+    padding: 0 0 60px 0;
+  }
+
+  .cta-wrapper {
+    background-color: variables.$GREY_900;
+    color: #fff;
+    padding: 80px 20px 80px 20px;
+    text-align: center;
+    border-radius: 8px;
+
+    .cta-content {
+        max-width: 555px;
+        margin: 0 auto;
+
+        h2 {
+          margin: 12px 0 20px 0;
+        }
+    
+        p {
+          margin-bottom: 31px;
+          color: #ccc;
+        }
+    }
+
+  }
+}

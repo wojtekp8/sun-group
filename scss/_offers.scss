@@ -3,20 +3,25 @@
 .offers {
   padding: 128px 0 0 0;
 
+  @media (max-width: variables.$BREAKPOINT_MD) {
+    padding: 60px 0 0 0;
+  }
+
   .offer-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 120px;
+    margin-bottom: 128px;
 
-    @media (max-width: variables.$BREAKPOINT-SM) {
+    @media (max-width: variables.$BREAKPOINT_MD) {
       flex-direction: column-reverse;
+      margin-bottom: 60px;
     }
 
     &.reverse {
       flex-direction: row-reverse;
 
-      @media (max-width: variables.$BREAKPOINT-SM) {
+      @media (max-width: variables.$BREAKPOINT_MD) {
         flex-direction: column-reverse;
       }
     }
@@ -30,7 +35,7 @@
       }
 
       h2 {
-        margin: 16px 0 24px;
+        margin: 12px 0 20px;
       }
 
       p {
@@ -41,11 +46,12 @@
     .offer-image {
       flex: 1;
       max-width: 548px;
+      max-height: 548px;
 
       img {
         width: 100%;
         border-radius: 8px;
-        object-fit: cover;
+        object-fit: contain;
       }
     }
   }

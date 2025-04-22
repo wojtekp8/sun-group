@@ -1,7 +1,7 @@
 @use "variables";
 
 .menu {
-  padding: 20px 0;
+  padding: 24px 0;
   background: #fff;
 
   .container {
@@ -34,15 +34,16 @@
     .menu-links {
       list-style: none;
       display: flex;
-      gap: 50px;
+      gap: 48px;
       align-items: center;
 
       li a:not(.btn) {
         text-decoration: none;
         color: variables.$GREY_700;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 24px;
+
+        &.action-2 {
+          font-family: 'Poppins', 'Inter', sans-serif;
+        }
       }
     }
   }
